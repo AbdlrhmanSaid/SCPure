@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Caesar Cipher</title>
+    <meta
+      name="description"
+      content="A page to encrypt and decrypt text using the Caesar Cipher technique."
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="./imgs/logo.jpg"
+          alt="Cyber Project Logo"
+          title="Click to return to Home Page"
+        />
+      </a>
+      <h1>Welcome to My Cyber Project</h1>
+    </header>
+
+    <h1>Caesar Cipher</h1>
+    <p>
+      Enter your plaintext and key to encrypt or decrypt using the Caesar
+      Cipher.
+    </p>
+
+    <!-- Encryption Section -->
+    <div id="encrypt-section">
+      <h2>Encrypt Text</h2>
+      <form onsubmit="return false;">
+        <input
+          style="padding: 10px; margin-right: 30px"
+          type="text"
+          id="encrypt-plaintext"
+          placeholder="Enter plain text"
+          required
+        />
+        <input
+          style="padding: 10px"
+          type="number"
+          id="encrypt-key"
+          placeholder="Enter key (e.g., 3)"
+          required
+        />
+        <button
+          style="
+            padding: 10px;
+            margin-left: 30px;
+            background-color: rgb(0, 255, 115);
+          "
+          onclick="encryptText()"
+        >
+          Encrypt
+        </button>
+      </form>
+      <div id="encrypt-output"></div>
+    </div>
+
+    <!-- Decryption Section -->
+    <div id="decrypt-section">
+      <h2>Decrypt Text</h2>
+      <form onsubmit="return false;">
+        <input
+          style="padding: 10px; margin-right: 30px"
+          type="text"
+          id="decrypt-ciphertext"
+          placeholder="Enter cipher text"
+          required
+        />
+        <input
+          style="padding: 10px"
+          type="number"
+          id="decrypt-key"
+          placeholder="Enter key (e.g., 3)"
+          required
+        />
+        <button
+          style="
+            padding: 10px;
+            margin-left: 30px;
+            background-color: rgb(0, 255, 115);
+          "
+          onclick="decryptText()"
+        >
+          Decrypt
+        </button>
+      </form>
+      <div id="decrypt-output"></div>
+    </div>
+
+    <script src="./js/ceaser.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Playfair Cipher</title>
+    <meta
+      name="description"
+      content="A page to encrypt and decrypt text using the Playfair Cipher technique."
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <a class="link" href="index.html">
+        <img
+          src="./imgs/logo.jpg"
+          alt="Cyber Project Logo"
+          title="Click to return to Home Page"
+        />
+      </a>
+      <h1>Welcome to My Cyber Project</h1>
+    </header>
+
+    <h1>Playfair Cipher</h1>
+    <p>
+      Enter your plaintext or ciphertext and a keyword to encrypt or decrypt
+      using the Playfair Cipher.
+    </p>
+
+    <!-- Encryption Section -->
+    <div id="encrypt-section">
+      <h2>Encrypt Text</h2>
+      <form onsubmit="return false;">
+        <textarea
+          id="encrypt-plaintext"
+          placeholder="Enter plain text"
+          required
+        ></textarea>
+        <input
+          type="text"
+          id="encrypt-keyword"
+          placeholder="Enter keyword (e.g., PLAYFAIR)"
+          required
+        />
+        <button onclick="encryptText()">Encrypt</button>
+      </form>
+      <div id="encrypt-output"></div>
+    </div>
+
+    <!-- Decryption Section -->
+    <div id="decrypt-section">
+      <h2>Decrypt Text</h2>
+      <form onsubmit="return false;">
+        <textarea
+          id="decrypt-ciphertext"
+          placeholder="Enter cipher text"
+          required
+        ></textarea>
+        <input
+          type="text"
+          id="decrypt-keyword"
+          placeholder="Enter keyword (e.g., PLAYFAIR)"
+          required
+        />
+        <button onclick="decryptText()">Decrypt</button>
+      </form>
+      <div id="decrypt-output"></div>
+    </div>
+
+    <script src="./js/playfair.js"></script>
+  </body>
+</html>
